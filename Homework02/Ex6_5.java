@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArraySortingAndStats{
+public class Ex6_5{
     public static void main(String[] args){
         Scanner keyboard = new Scanner(System.in);
         

@@ -14,7 +14,7 @@ public class Ex6_4{
                 int year = keyboard.nextInt();
                 
                 if(year >= 0){
-                    // Chuyển chuỗi nhập vào thành số tháng ngay trong main
+                    // Chuyển chuỗi nhập vào thành tháng 
                     int month = -1;
                     switch (monthInput){
                         case "1": case "january": case "jan.": case "jan": month = 1; break;

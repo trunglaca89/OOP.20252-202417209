@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DaysInMonth{
+public class 6_4{
     public static void main(String[] args){
         Scanner keyboard = new Scanner(System.in);
         boolean isValidInput = false;

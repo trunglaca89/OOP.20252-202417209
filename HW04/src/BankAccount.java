@@ -23,4 +23,26 @@ public class BankAccount{
     public String getAccountNumber(){ return this.accountNumber; }
     public String getOwnerName(){ return this.ownerName; }
     public double getBalance(){ return this.balance; }
+
+    public void deposit(double amount){
+        if(amount > 0){
+            this.balance += amount;
+            System.out.println("Deposit successful.");
+        }else{
+            System.out.println("Deposit failed: Amount must be > 0.");
+        }
+    }
+
+    public void withdraw(double amount){
+        if(amount > 0){
+            if(this.balance - amount >= MIN_BALANCE){
+                this.balance -= amount;
+                System.out.println("Withdraw successful.");
+            }else{
+                System.out.println("Withdraw failed: Insufficient balance.");
+            }
+        }else{
+            System.out.println("Withdraw failed: Amount must be > 0.");
+        }
+    }
 }

@@ -45,4 +45,32 @@ public class BankAccount{
             System.out.println("Withdraw failed: Amount must be > 0.");
         }
     }
+
+    public void transfer(BankAccount receiver, double amount){
+        if(amount > 0){
+            double totalDeduction = amount + (amount * TRANSFER_FEE_RATE);
+            if(this.balance - totalDeduction >= MIN_BALANCE){
+                this.balance -= totalDeduction;
+                receiver.balance += amount;
+                System.out.println("Transfer successful.");
+            }else{
+                System.out.println("Transfer failed: Insufficient balance.");
+            }
+        }else{
+            System.out.println("Transfer failed: Amount must be > 0.");
+        }
+    }
+
+    public void payBill(String billName, double amount){
+        if(amount > 0){
+            if(this.balance - amount >= MIN_BALANCE){
+                this.balance -= amount;
+                System.out.println("Pay bill successful.");
+            }else{
+                System.out.println("Pay bill failed: Insufficient balance.");
+            }
+        }else{
+            System.out.println("Pay bill failed: Amount must be > 0.");
+        }
+    }
 }
